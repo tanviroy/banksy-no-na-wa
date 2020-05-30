@@ -1,0 +1,100 @@
+<!--DOCTYPE HTML-->
+<html>
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <title>Banksy No Na Wa</title>
+  <link href="./style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./yeet.png" type="image/x-icon"/>
+</head>
+    
+<body>
+  <article>
+    <aside>
+      <img src="./camera.png" />
+      <p>No Flash <br/>Photography</p>
+    </aside>
+    <footer>
+      <h1> バンクシー の名は。<span> 2020 </span></h1>
+      <p></p>
+      <br/><p><b>Scroll to watch art come alive.</b></p>
+    </footer>
+  </article>
+    
+  <section>
+    <main>
+      <img class="wait" src="./frame.png" id="frame" />
+      <div class="wait" id="img"></div>
+      <div class="waiting" id="waiting">
+        <br/><br/>
+        Loading...
+      </div>
+    </main>
+  </section>
+  <div class="slices">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+  </div>
+</body>
+    
+<script type="text/javascript">
+  const img = document.getElementById('img');
+  const frame = document.getElementById('frame');
+  const waiting = document.getElementById('waiting');
+
+  const x = document.createElement("IMG");
+  x.setAttribute("src", "./knnw.png");
+  x.addEventListener("load", () => {
+    waiting.classList.add('wait');
+    waiting.classList.remove('waiting');
+    setTimeout(() => {
+      img.classList.remove('wait');
+    }, 0);
+  });
+
+  frame.addEventListener("load", () => {
+    frame.classList.remove('wait');
+  });
+
+  const imageWidth = 4977 / 7;
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+  window.onscroll = function() {
+    let yPos = window.scrollY;
+    img.style.backgroundPosition = `calc(-${imageWidth}px * ${yPos / 1000}) 0`;
+
+    let imgY;
+    if (yPos > 5000) {
+      imgY = `translateY(${Math.round((yPos - 5000) / 50)}px)`;
+    }
+    if (yPos < 12500) {
+      img.style.transform = imgY || 'translateY(0)';
+    }
+  }
+</script>
+</html>
+<!-- Oh and forgot to mention but... -->
+<!-- This project is dedicated to Soham De <3 -->
