@@ -1,4 +1,5 @@
 # Banksy No Na Wa (バンクシー の名は。) 🎨🗾
+#### Date of completion: 30th May 2020
 [https://banksy-no-na-wa.netlify.app/](https://banksy-no-na-wa.netlify.app/)
 
 ## Description
